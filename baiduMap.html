@@ -126,12 +126,12 @@
   map.addControl(new BMap.NavigationControl());  //添加默认缩放平移控件
   
   
-  function showOneAddr(){
+  function showOneAddr(output){
     var data_info = []
     for(var i=0;i<addrsArr.length;i++){
       var arr = []
       arr.push(addrsArr[i].search)
-      arr.push('地址：'+addrsArr[i].show)
+      arr.push('地址：'+output[i])
       arr.push(addrsArr[i].point)
       data_info.push(arr)
     }
@@ -147,7 +147,7 @@
         //if (point) {
           _point =point
           var marker = new BMap.Marker(new BMap.Point(addrsArr[i].point[0],addrsArr[i].point[1]));  // 创建标注
-          var content = addrsArr[i].show;
+          var content = output[i];
           map.addOverlay(marker);               // 将标注添加到地图中
           addClickHandler(content,marker);
       //  }else{
@@ -210,13 +210,30 @@
   var time2 = setInterval(function(){
       if(flag){
         //获取addrsArr 中地址重复复的是指地址为相加的
-        changeTheSame();
-        showOneAddr()
+        var output = judgeTheSame();
+        showOneAddr(output)
         clearInterval(time2)
       }
     },400);
-  function changeTheSame(){
-
+  function judgeTheSame(){
+    var output = []
+    var temp = []
+    temp.length = addrsArr.length
+    for(var i=0;i<addrsArr.length;i++){
+      var str = '<div>公司名称:'+addrsArr[i].show+'</div>'
+      temp[i] = str
+    }
+    for(var i=0;i<addrsArr.length;i++){
+      var _point = addrsArr[i].point
+      var add = temp[i]
+      for(var j=0;j<addrsArr.length;j++){
+        if(i!=j&&_point[0] == addrsArr[j].point[0]&&_point[1] == addrsArr[j].point[1]){
+          add += temp[j]
+        }
+      }
+      output.push(add)
+    }
+    return output
   }
 </script>
 </body>
