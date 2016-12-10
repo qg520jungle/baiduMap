@@ -1,0 +1,65 @@
+// out: null
+.f-cb:after, .f-cbli li:after {
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  content: ".";
+}
+
+.f-cb, .f-cbli li {
+  zoom: 1
+}
+.f-fl{
+	float: left;
+}
+.f-fr{
+	float: right;
+}
+.f-hd,.f-dn{
+  display: none;
+}
+.f-ib{
+	display: inline-block;
+}
+.f-tc{
+	text-align: center;
+}
+.f-tr{
+  text-align: right;
+}
+.f-lr(@lw:50px;@rw:100px;@pt:20px;@pb:20px;@pl:20px;@pr:20px;@space:20px){
+  position: relative;
+  .fl{
+    position: absolute;
+    width: @lw;
+    left: @pl;
+    top: @pt;
+  }
+  .fr{
+    position: absolute;
+    width: @rw;
+    right: @pr;
+    top: @pt;
+    text-align: right;
+  }
+  .ar{
+    position: absolute;
+    width: 100%;
+    left: @lw+@pl;
+    top: @pt;
+  }
+  .al{
+    position: absolute;
+    width: 100%;
+    right: @rw+@pr;
+    top: @pt;
+  }
+  .am{
+    position: absolute;
+    width: 100%;
+    left: @lw+@pl;
+    top: @pt;
+  }
+}
