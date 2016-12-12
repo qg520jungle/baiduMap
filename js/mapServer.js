@@ -1,5 +1,5 @@
 $(function(){
-  // 百度地图API功能
+/*  // 百度地图API功能
   var map = new BMap.Map("l-map");          // 创建地图实例
   var point = new BMap.Point(120.219375,30.259244);  // 创建点坐标
   var _city = $('#curCity').text()
@@ -87,7 +87,7 @@ $(function(){
     var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
     var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象 
     map.openInfoWindow(infoWindow,point); //开启信息窗口
-  }
+  }*/
 
 /*  addrChange()
   var time2 = setInterval(function(){
@@ -98,7 +98,7 @@ $(function(){
         clearInterval(time2)
       }
     },400);*/
-  function judgeTheSame(){
+  /*function judgeTheSame(){
     var output = []
     var temp = []
     temp.length = addrsArr.length
@@ -117,5 +117,21 @@ $(function(){
       output.push(add)
     }
     return output
-  }
+  }*/
+  var API_URL='/'
+  $('#table').bootstrapTable({ //
+        url: API_URL + '', //数据接口
+        method: 'POST',
+        contentType: 'application/x-www-form-urlencoded',
+        idField: "id",
+        pagination: true, //以下添加分页
+        pageNumber: 1,
+        pageSize: 10,
+        pageList: "[10]",
+        sidePagination: "client", //以上添加分页
+        uniqueId: "ROWNO",
+        onLoadSuccess: function() { 
+        }
+
+    });
 })

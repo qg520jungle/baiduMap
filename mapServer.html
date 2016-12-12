@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <title>批量地址维护</title>
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./lib/bootstrap-table.css">
     <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./lib/bootstrap-table.js"></script>
     <script src="./js/source.js"></script>
-    <script src="./js/main.js"></script>
-<!--     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Di1FAQVUbVY6FvD6RIS5OdXwzmD5SFsL"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Di1FAQVUbVY6FvD6RIS5OdXwzmD5SFsL"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
     <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
     <script type="text/javascript" src="http://api.map.baidu.com/library/CityList/1.2/src/CityList_min.js"></script>
-    <script src="./js/mapServer.js"></script>    -->
+    <script src="./js/mapServer.js"></script> 
 </head>
 
 <body>
     <div class="g-head">
         <div class="m-logo">
-            <span class="s-logo">百度地图地址维护</span>
+            <span class="s-logo">地址维护</span>
         </div>
         <div class="m-nav">
             <ul class="f-cb">
@@ -43,12 +44,8 @@
         </div>
         <div class="m-r">
         <!-- table加载使用 Bootstrap table -->
-          <table>
-            <thead>
-              <tr>
-                <th>在此显示初始化成功后的地址列表详细信息</th>
-              </tr>
-            </thead>
+          <table id="table">
+          
           </table>
         </div>
       </div>
