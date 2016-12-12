@@ -61,8 +61,31 @@ input:-moz-placeholder {
 .u-btn {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #7fff00;
+  background: #7fff00;
+  font-family: "Microsoft Yahei";
   color: #333;
+  font-size: 12px;
+  cursor: pointer;
+}
+.u-btn-main {
+  color: #333;
+  background: #efefef;
+  border: 1px solid #666;
+}
+.u-btn-main:hover {
+  color: #000;
+  background: #ccc;
+  border: 1px solid #000;
+}
+.u-btn-small {
+  color: #333;
+  background: #efefef;
+  border: 1px solid #666;
+}
+.u-btn-small:hover {
+  color: #000;
+  background: #ccc;
+  border: 1px solid #000;
 }
 .s-title {
   font-size: 1.6rem;
@@ -427,4 +450,97 @@ input:-moz-placeholder {
 }
 .m-option-handle .u-items .item {
   float: left;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+#l-map {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+#result {
+  width: 100%;
+}
+li {
+  line-height: 28px;
+}
+.cityList {
+  height: 320px;
+  width: 372px;
+  overflow-y: auto;
+}
+.sel_container {
+  z-index: 9999;
+  font-size: 12px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 140px;
+  background: rgba(255, 255, 255, 0.8);
+  height: 30px;
+  line-height: 30px;
+  padding: 5px;
+}
+.map_popup {
+  position: absolute;
+  z-index: 200000;
+  width: 382px;
+  height: 344px;
+  right: 0px;
+  top: 40px;
+}
+.map_popup .popup_main {
+  background: #fff;
+  border: 1px solid #8BA4D8;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.map_popup .title {
+  background: url("http://map.baidu.com/img/popup_title.gif") repeat scroll 0 0 transparent;
+  color: #6688CC;
+  font-weight: bold;
+  height: 24px;
+  line-height: 25px;
+  padding-left: 7px;
+}
+.map_popup button {
+  background: url("http://map.baidu.com/img/popup_close.gif") no-repeat scroll 0 0 transparent;
+  cursor: pointer;
+  height: 12px;
+  position: absolute;
+  right: 4px;
+  top: 6px;
+  width: 12px;
+}
+.m-ct {
+  padding: 20px;
+}
+.m-l {
+  float: left;
+  width: 35%;
+}
+.m-r {
+  float: left;
+  width: 60%;
+  margin-left: 5%;
+}
+.m-msg {
+  margin: 10px 0;
+  min-height: 60px;
+  padding: 0 10px;
+}
+.m-btn-box {
+  margin-top: 10px;
+}
+.m-btn-box .u-btn {
+  margin-right: 10px;
 }

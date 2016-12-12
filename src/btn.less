@@ -2,6 +2,26 @@
 .u-btn{
 	display: inline-block;
 	padding: 5px 10px;
-	background-color: #7fff00;
+	background: #7fff00;
+  font-family: "Microsoft Yahei";
 	color: #333;
+  font-size: 12px;
+  cursor: pointer;
+}
+.btn(@color:#333,@bg:#efefef,@bd_c:#666){
+  color: @color;
+  background: @bg;
+  border: 1px solid @bd_c;
+}
+.u-btn-main{
+  .btn();
+  &:hover{
+    .btn(#000,#ccc,#000);
+  }
+}
+.u-btn-small{
+  .btn();
+  &:hover{
+    .btn(#000,#ccc,#000);
+  }
 }

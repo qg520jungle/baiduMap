@@ -1,51 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>批量输入地址</title>
-    <link rel="stylesheet" href="./css/common.css">
-    <script src="./js/jquery-1.11.3.js"></script>
-    <script src="./js/source.js"></script>
-    <script src="./js/main.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Di1FAQVUbVY6FvD6RIS5OdXwzmD5SFsL"></script>
-    <!-- 加载百度地图样式信息窗口 -->
-    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
-    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
-    <!-- 加载城市列表 -->
-    <script type="text/javascript" src="http://api.map.baidu.com/library/CityList/1.2/src/CityList_min.js"></script>
-    
-</head>
-
-<body>
-    <div class="g-head">
-        <div class="m-logo">
-            <span class="s-logo">百度地图查看器</span>
-        </div>
-        <div class="m-nav">
-            <ul class="f-cb">
-                <li><a>以下正文</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="g-body">
-        <div id="l-map"></div>
-          <div id="result">
-            <button id="open">打开</button><button id="close">关闭</button>
-          </div>
-          <!--城市列表-->
-          <div class="sel_container"><strong id="curCity">杭州市</strong> [<a id="curCityText" href="javascript:void(0)">更换城市</a>]</div>
-          <div class="map_popup" id="cityList" style="display:none;">
-            <div class="popup_main">
-              <div class="title">城市列表</div>
-              <div class="cityList" id="citylist_container"></div>
-              <button id="popup_close"></button>
-            </div>
-          </div>
-    </div>
-    <div class="g-foot"></div>
-
-    <script type="text/javascript">
+$(function(){
   // 百度地图API功能
   var map = new BMap.Map("l-map");          // 创建地图实例
   var point = new BMap.Point(120.219375,30.259244);  // 创建点坐标
@@ -136,7 +89,7 @@
     map.openInfoWindow(infoWindow,point); //开启信息窗口
   }
 
-  addrChange()
+/*  addrChange()
   var time2 = setInterval(function(){
       if(flag){
         //获取addrsArr 中地址重复复的是指地址为相加的
@@ -144,7 +97,7 @@
         showOneAddr(output)
         clearInterval(time2)
       }
-    },400);
+    },400);*/
   function judgeTheSame(){
     var output = []
     var temp = []
@@ -165,10 +118,4 @@
     }
     return output
   }
-</script>
-</body>
-
-</html>
-
-
-
+})
