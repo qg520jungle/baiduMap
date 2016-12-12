@@ -136,15 +136,17 @@
     map.openInfoWindow(infoWindow,point); //开启信息窗口
   }
 
-  addrChange()
-  var time2 = setInterval(function(){
+  //addrChange()
+  /*var time2 = setInterval(function(){
       if(flag){
         //获取addrsArr 中地址重复复的是指地址为相加的
         var output = judgeTheSame();
         showOneAddr(output)
         clearInterval(time2)
       }
-    },400);
+    },400);*/
+    var output = judgeTheSame();
+    showOneAddr(output)
   function judgeTheSame(){
     var output = []
     var temp = []
